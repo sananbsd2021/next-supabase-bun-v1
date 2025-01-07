@@ -39,7 +39,7 @@ export async function GET() {
     const { data, error } = await supabase
       .from('contact') // Replace 'gallery' with your table name
       .select('*')
-      .order('created_at', { ascending: false }); // Ensure consistent ordering if `createdAt` exists
+      .order('createdAt', { ascending: false }); // Ensure consistent ordering if `createdAt` exists
 
     if (error) {
       throw error;
